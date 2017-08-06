@@ -1,11 +1,13 @@
 <?php
 /**
- * Bitcoin Status Page - Stats
+ * Hush Status Page
  *
  * @category File
- * @package  BitcoinStatus
+ * @package  HushStatus
+ * @author   madbuda <madbuda@gmail.com>
  * @author   Craig Watson <craig@cwatson.org>
  * @license  https://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
+ * @link     https://github.com/madbuda/hushd-status
  * @link     https://github.com/craigwatson/bitcoind-status
  */
 
@@ -28,9 +30,9 @@ case 'connection':
 case 'peer':
     $data_file  = $config['peercount_file'];
     $min_points = $config['peercount_min_data_points'];
-    $headers    = array('Date','Other','Classic','BitCoinJ','Core','Unlimited');
-    $prefixes   = array('new Date(','','','','','');
-    $postfixes  = array('*1000)','','','','','');
+    $headers    = array('Date','Other','Linux','Windows');
+    $prefixes   = array('new Date(','','','','');
+    $postfixes  = array('*1000)','','','','');
 
     foreach ($config['peercount_extra_nodes'] as $key => $val) {
         $headers[]   = $val;

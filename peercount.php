@@ -1,11 +1,13 @@
 <?php
 /**
- * Bitcoin Status Page - Peer Stats
+ * Hush Status Page
  *
  * @category File
- * @package  BitcoinStatus
+ * @package  HushStatus
+ * @author   madbuda <madbuda@gmail.com>
  * @author   Craig Watson <craig@cwatson.org>
  * @license  https://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
+ * @link     https://github.com/madbuda/hushd-status
  * @link     https://github.com/craigwatson/bitcoind-status
  */
 
@@ -51,10 +53,8 @@ $new_peers = $bitcoin->getpeerinfo();
 
 // Default types
 $default_types = array(
-  'classic'  => 'Classic',
-  'bitcoinj' => 'BitcoinJ',
-  'core'     => 'Satoshi',
-  'unlimited'=> 'Unlimited'
+  'linux'  => 'MagicBean',
+  'windows' => 'BeanStalk'
 );
 
 // If extra nodes are set, include them
