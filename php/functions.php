@@ -134,6 +134,7 @@ function getData($from_cache = false)
     }
 
     // Get max height from explorer.myhush.org or zcha.in
+/**
     if ($config['display_max_height'] === true) {
         $bitnodes_curl = curl_init();
         if ($config['display_testnet'] === true) {
@@ -152,7 +153,7 @@ function getData($from_cache = false)
 
     writeToCache($data);
     return $data;
-
+*/
 }
 
 /**
