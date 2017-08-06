@@ -134,7 +134,6 @@ function getData($from_cache = false)
     }
 
     // Get max height from explorer.myhush.org or zcha.in
-/**
     if ($config['display_max_height'] === true) {
         $bitnodes_curl = curl_init();
         if ($config['display_testnet'] === true) {
@@ -144,7 +143,7 @@ function getData($from_cache = false)
             $exec_result = json_decode(curlRequest("https://explorer.myhush.org/api/status?q=getInfo", $bitnodes_curl), true);
             $data['max_height'] = $exec_result['blocks'];
         }
-        $data['node_height_percent'] = round(($data['blocks']/$data['max_height'])*100, 1);
+        $data['node_height_percent'] = 100;
     }
 
     // Work out if we should display charts or not
@@ -153,7 +152,7 @@ function getData($from_cache = false)
 
     writeToCache($data);
     return $data;
-*/
+
 }
 
 /**
